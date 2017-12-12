@@ -5,29 +5,30 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body style="width: 100%; position: relative;right: 10px;">
+<body>
 	
-		<header class="row">
-			<div class="column column-4" >
-				<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
-			</div>
-			<ul class="column column-8">
-				<li>Inicio</li>
-				<li>Produtos e Serviços</li>
-				<li>Cases</li>
-				<li>Quem Somos</li>
-				<li>Contato</li>
-				<li>Blog</li>
-				<li>Cursos Gratuitos</li>
-			</ul>
-		</header>
+	<header class="row">
+		<div class="col-md-4" >
+			<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
+		</div>
+		<ul class="col-md-8">
+			<li>Inicio</li>
+			<li>Produtos e Serviços</li>
+			<li>Cases</li>
+			<li>Quem Somos</li>
+			<li>Contato</li>
+			<li>Blog</li>
+			<li>Cursos Gratuitos</li>
+		</ul>
+	</header>
 
-		<h1 class="slogan" id="passosSlogan" style="background-image: url(backgrounds/elearning_home.png);">
-			<span>Capacitação online descomplicada.</span>
-			<br>
-			<span>Torne real seu projeto de treinamento!</span>
-		</h1>
+	<h1 class="slogan" id="passosSlogan" style="background-image: url(backgrounds/elearning_home.png);">
+		<span>Capacitação online descomplicada.</span>
+		<br>
+		<span>Torne real seu projeto de treinamento!</span>
+	</h1>
 
 	<span class="pos-head">Nós cuidamos da execução, <b style="color: black;">você cuida das pessoas</b></span>
 
@@ -41,61 +42,63 @@
 	</div>
 
 	<span class="pos-head">Veja o que nossos clientes comentam sobre a Mobiliza:</span> 
-
-	<div class="row sessaoComentarios">
-		<div class="column-5 comentario">
-			<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
-			<p class="block paragrafo">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
-			<span class="block nome">LIVIS COSTA</span>
-			<span class="block ocupacao">Responsável técnico por treinamentos na Academia Volkswagen</span>
+	
+		<div class="row sessaoComentarios">
+			<div class="col-md-6 col-sm-12 comentario">
+				<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
+				<p class="block paragrafo">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
+				<span class="block nome">LIVIS COSTA</span>
+				<span class="block ocupacao">Responsável técnico por treinamentos na Academia Volkswagen</span>
+			</div>
+			<div class="col-md-6 col-sm-12 comentario">
+				<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
+				<p class="block paragrafo">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
+				<span class="block nome">MARCUS CASTILHO</span>
+				<span class="block ocupacao">Gerente de Treinamento AstraZeneca Brasil</span>
+			</div>
 		</div>
-		<div class="column-5 comentario">
-			<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
-			<p class="block paragrafo">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
-			<span class="block nome">MARCUS CASTILHO</span>
-			<span class="block ocupacao">Gerente de Treinamento AstraZeneca Brasil</span>
-		</div>
-	</div>
+	
 
-	<img src="apoiadores.png">
+	<!--<img src="apoiadores.png">-->
 
 	<span class="pos-head" id="produzir">Gamification? Mobile learning? O que você precisa produzir?</span>
-
-	<div class="row">
-		<div class="produtos" style="background-image: url(backgrounds/elearning_home_applique.png);">
-			<img src="logos/elearning_applique_logo.png">
-			<h2>Applique</h2>
-			<p class="chamativo">Faça você mesmo. <br>
-				Tenha autonomia <br>
-				na hora de criar.</p>
-			<button class="bt">Conheça o Applique</button>
+	
+		<div class="row">
+			<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_applique.png);">
+				<img src="logos/elearning_applique_logo.png">
+				<h2 class="nomeProdutos">Applique</h2>
+				<p class="chamativo">Faça você mesmo. <br>
+					Tenha autonomia <br>
+					na hora de criar.</p>
+				<button class="bt">Conheça o Applique</button>
+			</div>
+			<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_smart.png);">
+				<img src="logos/elearning_smart_logo.png">
+				<h2 class="nomeProdutos">Smart</h2>
+				<p class="chamativo">Nós fazemos <br>
+					no Applique <br>
+					para você editar.</p>
+				<button class="bt">Conheça o Smart</button>
+			</div>
+			<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_studio.png);">
+				<img src="logos/elearning_icon_studio.png" style="height: 130px;">
+				<h2 class="nomeProdutos">Studio</h2>
+				<p class="chamativo">Nós fazemos <br>
+					projetos sob medida <br>
+					para você.
+				</p>
+				<button class="bt">Conheça o Studio</button>
+			</div>
+			<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/Site_Class_Home.png);">
+				<img src="logos/elearning_class_logo.png">
+				<h2 class="nomeProdutos">Class</h2>
+				<p class="chamativo">Cursos de prateleira<br> 
+					prontinhos para<br>
+					sua plataforma.</p>
+				<button class="bt">Conheça o Class</button>
+			</div>
 		</div>
-		<div class="produtos" style="background-image: url(backgrounds/elearning_home_smart.png);">
-			<img src="logos/elearning_smart_logo.png">
-			<h2>Smart</h2>
-			<p class="chamativo">Nós fazemos <br>
-				no Applique <br>
-				para você editar.</p>
-			<button class="bt">Conheça o Smart</button>
-		</div>
-		<div class="produtos" style="background-image: url(backgrounds/elearning_home_studio.png);">
-			<img src="logos/elearning_icon_studio.png" style="height: 130px;">
-			<h2>Studio</h2>
-			<p class="chamativo">Nós fazemos <br>
-				projetos sob medida <br>
-				para você.
-			</p>
-			<button class="bt">Conheça o Studio</button>
-		</div>
-		<div class="produtos" style="background-image: url(backgrounds/Site_Class_Home.png);">
-			<img src="logos/elearning_class_logo.png">
-			<h2>Class</h2>
-			<p class="chamativo">Cursos de prateleira<br> 
-				prontinhos para<br>
-				sua plataforma.</p>
-			<button class="bt">Conheça o Class</button>
-		</div>
-	</div>
+	
 
 	<span class="sloganFim">Estamos há mais de 13 anos <br>
 	fazendo o que amamos: <br>
