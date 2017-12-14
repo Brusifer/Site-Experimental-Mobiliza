@@ -3,8 +3,11 @@
 <head>
 	<title>Mobiliza-Site Experimental Bruno</title>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900,900i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="media-query.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,50 +17,51 @@
 			<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
 		</div>
 		<ul class="col-md-8">
-			<li>Inicio</li>
+			<li>Início</li>
 			<li>Produtos e Serviços</li>
 			<li>Cases</li>
 			<li>Quem Somos</li>
 			<li>Contato</li>
 			<li>Blog</li>
-			<li>Cursos Gratuitos</li>
+			<li>Cursos Gratúitos</li>
 		</ul>
 	</header>
 
-	<h1 class="slogan" id="passosSlogan" style="background-image: url(backgrounds/elearning_home.png);">
-		<span>Capacitação online descomplicada.</span>
-		<br>
-		<span>Torne real seu projeto de treinamento!</span>
+	<h1 class="slogan" style="background-image: url(backgrounds/elearning_home.png);">
+		<span id="pricipal">Capacitação online descomplicada.<br>
+		Torne real seu projeto de treinamento!</span>
 	</h1>
 
-	<span class="pos-head">Nós cuidamos da execução, <b style="color: black;">você cuida das pessoas</b></span>
+	<span class="pos-head">Nós cuidamos da execução, <b style="color: black; font-weight: 900;">você cuida das pessoas</b></span>
 
 	<div class="passos row">
-		<div class="column column-4 sessaoPassos">
-			<span  class="slogan" id="passos4">Capacitação <br>online em <br>4 passos:</span>
+		<div class="column col-md-4 col-sm-12 sessaoPassos">
+			<span  class="slogan" id="passos4">Capacitação online em 4 passos:</span>
 			<br>
-			<br>
-			<button class="bt">Quero conhecer agora</button>
+			<button class="bt" id="btConhecer">Quero conhecer agora</button>
 		</div>
 	</div>
 
 	<span class="pos-head">Veja o que nossos clientes comentam sobre a Mobiliza:</span> 
-	
-		<div class="row sessaoComentarios">
-			<div class="col-md-6 col-sm-12 comentario">
-				<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
-				<p class="block paragrafo">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
+
+	<div class="row sessaoComentarios">
+		<div class="col-md-6 col-sm-12">
+			<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
+			<div class="comentario">
+				<p class="block">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
 				<span class="block nome">LIVIS COSTA</span>
 				<span class="block ocupacao">Responsável técnico por treinamentos na Academia Volkswagen</span>
 			</div>
-			<div class="col-md-6 col-sm-12 comentario">
-				<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
-				<p class="block paragrafo">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
+			<div class="comentario">
+				<p class="block">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
 				<span class="block nome">MARCUS CASTILHO</span>
 				<span class="block ocupacao">Gerente de Treinamento AstraZeneca Brasil</span>
 			</div>
 		</div>
-	
+	</div>
 
 	<!--<img src="apoiadores.png">-->
 
