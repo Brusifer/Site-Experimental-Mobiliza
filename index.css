@@ -148,11 +148,14 @@ p{
 }
 
 /*-------produtos-----*/
-#produzir{
+.logoProduto{
+	height: 35%;
 	position: relative;
-	top: -10px;
+	top: -30px;
+	margin-bottom: -20px;
 }
 .produtos{
+	height: 500px;
 	text-align: center;
 	padding: 100px;
 	background-repeat: no-repeat;
@@ -163,16 +166,19 @@ p{
 	color: white;
 	font-family: Lato, sans-serif;
 	font-weight: 700;
-	font-size: 50px;
+	font-size: 3em;
+	margin-bottom: 2%;
 }
 
 .chamativo{
 	color: white;
 	position: relative;
 	left: 5%;
+	margin: 7% 0;
 	width: auto;
 	font-weight: 700;
 	font-family: Lato,sans-serif;
+	font-size: 1.25em;
 }
 
 
@@ -189,38 +195,37 @@ p{
 	display: block;
 	padding: 150px;
 	font-size: 50px;
-	position: relative;
-	top: -10px;
 }
 
 
 /*-------footer-----*/
-.footerFrase{
+.footerSlogan{
 	text-align: center;;
 	color: white;
 	display: inline-block;
 	font-size: 40px;
 	margin:0;
-	padding:50px;
+	padding:3%;
 	font-family: Lato, sans-serif;
-	padding-left:400px; 
 	font-weight: 700;
+}
+#btFooter{
+    width: auto;
+    top: 3.75em;
+    float: left;
+    right: 6%;
 }
 .esquerdaFooter{
 	text-align: left;
-	position: relative;
-	left: 300px;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 .meioFooter{
 	text-align: center;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 .direitaFooter{
 	text-align: right;
-	position: relative;
-	right: 300px;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 
 #frase{
@@ -243,4 +248,7 @@ p{
 }
 #iconesSocial{
 	margin: 35px;
+}
+#email, #endereco{
+	display: block;
 }

@@ -14,6 +14,9 @@
 	}
 
 	/*-----4passos-----*/
+	.passos{
+		background-image:url(backgrounds/grafismo_centered.png);
+	}
 	#passos4{
 		display:inline;
 		color:#404041;
@@ -33,5 +36,47 @@
 		display: inline-block;
 		vertical-align: -550%;
 		margin: auto;
+	}
+	/*------produtos-----*/
+	.nomeProdutos{
+		font-size: 6em;
+	}
+	.chamativo{
+		font-size:2em;
+	}
+
+	/*-------footer---------*/
+	#btFooter{
+		display: block;
+		text-align:  center;
+		margin-left: 40%;
+		margin-top: -1%;
+		margin-bottom: 2%;
+	}
+}
+
+@media screen and (max-width: 2500px){
+	#apoio{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	/*------produtos-----*/
+	.produtos{
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.esquerdaFooter{
+		left:35%;
+	}
+	#frase{
+		text-align: center;
+	}
+	.direitaFooter{
+		text-align: center;
+		right: 0;
 	}
 }
