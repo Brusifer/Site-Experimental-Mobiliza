@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste Mustache</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900,900i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="media-query.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="mustache.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function dropdown(){
+			if (document.getElementById("menu").style.display === "none") {
+				document.getElementById("menu").style.display = "block";
+			}else{
+				document.getElementById("menu").style.display = "none";
+			}
+		}
+	</script>
+	<script>
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var template = '{{#produtos}}<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url({{img}});"><img src="{{logo}}" class="logoProduto"><h2 class="nomeProdutos">{{nome}}</h2><p class="chamativo">{{&chamativo}}</p><button class="bt">{{botao}}</button></div>{{/produtos}}'; 
+        var data = {
+        	produtos: [
+	{nome:"Applique", chamativo: "Faça você mesmo. <br/>Tenha autonomia <br/>na hora de criar.", botao: "Conheça o Applique", img: "backgrounds/elearning_home_applique.png", logo: "logos/elearning_applique_logo.png"},
+	{nome:"Smart", chamativo: "Nós fazemos <br/>no Applique <br/>para você editar.", botao: "Conheça o Smart", img: "backgrounds/elearning_home_smart.png", logo: "logos/elearning_smart_logo.png"},
+	{nome:"Studio", chamativo: "Nós fazemos <br/>projetos sob medida <br/>para você.", botao: "Conheça o Studio", img: "backgrounds/elearning_home_studio.png", logo: "logos/elearning_icon_studio.png"},
+	{nome:"Class", chamativo: "Cursos de prateleira <br/>prontinhos para <br/>sua plataforma.", botao: "Conheça o Class", img: "backgrounds/Site_Class_Home.png", logo: "logos/elearning_class_logo.png"}
+	]};
+        renderView(data, template);
+    });
+    function renderView(data, template) {
+        var renderContent = Mustache.render(template, data);
+        var container = document.querySelector("#teste");
+        container.innerHTML = renderContent;
+    }
+    </script>
+	
+	<header>
+		<div class="col-md-4" >
+			<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
+		</div>
+		<button onclick="dropdown()">=</button>
+		<ul class="col-md-8 list-group" id="menu">
+			<li class="">Início</li>
+			<li class="">Produtos e Serviços</li>
+			<li class="">Cases</li>
+			<li class="">Quem Somos</li>
+			<li class="">Contato</li>
+			<li class="">Blog</li>
+			<li class="">Cursos Gratúitos</li>
+			<li  class="" id="telefoneMenu" style="display: none;">(48) 3222.1905</li>
+		</ul>
+	</header>
+
+	<h1 class="slogan" style="background-image: url(backgrounds/elearning_home.png);">
+		<span id="pricipal">Capacitação online descomplicada.<br>
+		Torne real seu projeto de treinamento!</span>
+	</h1>
+
+	<span class="pos-head">Nós cuidamos da execução, <b style="color: black; font-weight: 900;">você cuida das pessoas</b></span>
+
+	<div class="passos">
+		<div class="column col-md-4 col-sm-12 sessaoPassos">
+			<span  class="slogan" id="passos4">Capacitação online em 4 passos:</span>
+			<br>
+			<button class="bt" id="btConhecer">Quero conhecer agora</button>
+		</div>
+	</div>
+
+	<span class="pos-head">Veja o que nossos clientes comentam sobre a Mobiliza:</span> 
+
+	<div class="sessaoComentarios">
+		<div class="col-md-6 col-sm-12">
+			<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
+			<div class="comentario">
+				<p class="block">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
+				<span class="block nome">LIVIS COSTA</span>
+				<span class="block ocupacao">Responsável técnico por treinamentos na Academia Volkswagen</span>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
+			<div class="comentario">
+				<p class="block">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
+				<span class="block nome">MARCUS CASTILHO</span>
+				<span class="block ocupacao">Gerente de Treinamento AstraZeneca Brasil</span>
+			</div>
+		</div>
+	</div>
+
+	<img src="apoiadores.png" id="apoio">
+
+	<span class="pos-head" id="produzir">Gamification? Mobile learning? O que você precisa produzir?</span>
+	
+	<div class="row" id="teste"></div>
+
+
+	<span class="sloganFim">Estamos há mais de 13 anos <br>
+	fazendo o que amamos: <br>
+	<b>desenvolvimento e-Learning</b></span>
+
+
+	<footer style="background-image: url(backgrounds/footer_pattern.png); position: relative; top: -10px;">
+		<div style="margin-bottom: 30px;">
+			<h2 class="footerSlogan col-sm-9">Torne real seu projeto de treinamento!</h2>
+			<button class="bt col-sm-3" id="btFooter">Fale com um consultor</button>
+		</div>
+		<div class="container">
+			<div>
+				<div class="col-md-4 col-sm-12 esquerdaFooter">
+					<img src="logos/elearning_mobiliza_logo_slogan.png">
+					<p id="frase">Somos especialistas em capacitação online e trabalhamos com o método de 4 passos. Planejamento, produção, acompanhamento e análise. </p>
+					<span id="copyright" class="spanFooter">© 2017 Mobiliza | Todos direitos reservados</span>
+				</div>
+				<div class="col-md-4 col-sm-12 meioFooter">
+					<span class="socialFrase spanFooter">Acompanhe a Mobiliza</span>
+					<div id="iconesSocial">
+						<img src="social/icon_facebook.png">
+						<img src="social/icon_linkedin.png">
+						<img src="social/icon_google+.png">
+						<img src="social/icon_twitter.png">
+						<img src="social/insta_branco.png">
+					</div>
+					<span class="socialFrase spanFooter">Trabalhe conosco</span>
+				</div>
+				<div class="col-md-4 col-sm-12 direitaFooter">
+					<span id="contato" class="spanFooter">Contato</span>
+					<h1 id="telefone">(48) 3222.1905</h1>
+					<span id="email" class="spanFooter">conexao@mobiliza.com.br</span><br>
+					<span id="endereco" class="spanFooter">Rua Santa Luzia, 100 <br>
+					Edifício The Place - Sala 914 <br>
+					Trindade, Florianópolis | Brasil <br>
+					88036-540 </span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
