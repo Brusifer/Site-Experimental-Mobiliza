@@ -55,8 +55,7 @@ header button{
 	color: white;
 	font-family: 'Lato', sans-serif;
 	box-sizing:border-box;
-	padding: 20%;
-	padding-bottom: 25%;
+	padding: 20.5%;
 	font-weight: 800;
 	font-size:3.7em;
 	line-height: 1.5em;
@@ -67,6 +66,15 @@ header button{
 }
 #pricipal{
 	width:80%;
+}
+#setaSlogan{
+	border: solid white;
+	border-radius: 100%;
+	font-size: 40px;
+	background-color: transparent;
+	color: white;
+	font-family: 'Stalinist One';
+	padding: 0 5px;
 }
 
 
@@ -96,7 +104,7 @@ header button{
 	margin-left:0;
 }
 #passos4{
-	text-align: justify;
+	text-align: left;
 	padding: 0;
 	font-weight: 700;
     width: 45%;
@@ -268,8 +276,8 @@ p{
 	font-weight: 700;
 	font-family: Lato, sans-serif;
 }
-#copyright{
-	font-size: 13px;
+#copyright, .spanFooter{
+	font-size: 15px;
 }
 #iconesSocial{
 	margin: 15% 0;
