@@ -81,6 +81,8 @@ header button{
 	color: white;
 	font-family: 'Stalinist One';
 	padding: 0 5px;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 
