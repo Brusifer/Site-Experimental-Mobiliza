@@ -9,43 +9,58 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="grid.css">
 	<link rel="stylesheet" type="text/css" href="media-query.css">
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#menuButton').click(function() {
+  				$('#menu').toggleClass('ativo')
+			});
+			$('.menuItem').fadeOut(10);
+			$('.menuItem').fadeIn(1000);
+			$('div').fadeOut(10);
+			$('div').fadeIn(1000);
+
+			$("#setaSlogan").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#setaSlogan").offset().top
+			    }, 1500);
+			});
+		});
+
+		$(document).scroll( function() {
+		    var value = $(this).scrollTop();
+		    if ( value > 0 )
+		        $("#header").css("backgroundColor", "rgb(255, 84, 23)");
+		    else
+		        $("#header").css("backgroundColor", "transparent");
+		});
+	</script> 
 </head>
-<body>
-	<script type="text/javascript">
-		function dropdown(){
-			if (document.getElementById("menu").style.display === "none") {
-				document.getElementById("menu").style.display = "block";
-			}else{
-				document.getElementById("menu").style.display = "none";
-			}
-		}
-	</script>
-	
-	<header>
+<body id="body">
+	<header id="header">
 		<div class="col-md-4" >
 			<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
 		</div>
-		<button onclick="dropdown()">=</button>
+		<button id="menuButton">=</button>
 		<ul class="col-md-8 list-group" id="menu">
-			<li class="">Início</li>
-			<li class="">Produtos e Serviços</li>
-			<li class="">Cases</li>
-			<li class="">Quem Somos</li>
-			<li class="">Contato</li>
-			<li class="">Blog</li>
-			<li class="">Cursos Gratúitos</li>
-			<li  class="" id="telefoneMenu" style="display: none;">(48) 3222.1905</li>
+			<li class="menuItem">Início</li>
+			<li class="menuItem">Produtos e Serviços</li>
+			<li class="menuItem">Cases</li>
+			<li class="menuItem">Quem Somos</li>
+			<li class="menuItem">Contato</li>
+			<li class="menuItem">Blog</li>
+			<li class="menuItem">Cursos Gratúitos</li>
 		</ul>
 	</header>
 
-	<div style="background-image: url(backgrounds/elearning_home.png); text-align: center;">
+	<div id="sloganPrincipal">
 		<h1 class="slogan">
 			<span id="pricipal">Capacitação online descomplicada.<br>
 			Torne real seu projeto de treinamento!</span>
 		</h1>
-		<a id="setaSlogan" href="#setaSlogan">v</a>
+		<a id="setaSlogan">v</a>
 	</div>
 
 	<span class="pos-head" id="primeiroSlogan">Nós cuidamos da execução, <b style="color: black; font-weight: 900;">você cuida das pessoas</b></span>
@@ -124,41 +139,42 @@
 	fazendo o que amamos: <br>
 	<b>desenvolvimento e-Learning</b></span>
 
-
-	<footer style="background-image: url(backgrounds/footer_pattern.png);">
-		<div>
-			<h2 class="footerSlogan col-sm-9">Torne real seu projeto de treinamento!</h2>
-			<button class="bt col-sm-3" id="btFooter">Fale com um consultor</button>
-		</div>
-		<div class="container">
-			<div>
-				<div class="col-md-4 col-sm-12 esquerdaFooter">
-					<img src="logos/elearning_mobiliza_logo_slogan.png">
-					<p id="frase">Somos especialistas em capacitação online e trabalhamos com o método de 4 passos. Planejamento, produção, acompanhamento e análise. </p>
-					<span id="copyright" class="spanFooter">© 2017 Mobiliza | Todos direitos reservados</span>
-				</div>
-				<div class="col-md-4 col-sm-12 meioFooter">
-					<span class="socialFrase spanFooter">Acompanhe a Mobiliza</span>
-					<div id="iconesSocial">
-						<img src="social/icon_facebook.png">
-						<img src="social/icon_linkedin.png">
-						<img src="social/icon_google+.png">
-						<img src="social/icon_twitter.png">
-						<img src="social/insta_branco.png">
+	<div style="background-image: url(backgrounds/footer_pattern.png);">
+		<footer class="container">
+			<div class="row" style="margin-bottom: 50px;">
+				<h2 class="footerSlogan col-sm-9">Torne real seu projeto de treinamento!</h2>
+				<button class="bt col-sm-3" id="btFooter">Fale com um consultor</button>
+			</div>
+			<div class="row">
+				<div>
+					<div class="col-md-4 col-sm-12 esquerdaFooter">
+						<img src="logos/elearning_mobiliza_logo_slogan.png">
+						<p id="frase">Somos especialistas em capacitação online e trabalhamos com o método de 4 passos. Planejamento, produção, acompanhamento e análise. </p>
+						<span id="copyright" class="spanFooter">© 2017 Mobiliza | Todos direitos reservados</span>
 					</div>
-					<span class="socialFrase spanFooter">Trabalhe conosco</span>
-				</div>
-				<div class="col-md-4 col-sm-12 direitaFooter">
-					<span id="contato" class="spanFooter">Contato</span>
-					<h1 id="telefone">(48) 3222.1905</h1>
-					<span id="email" class="spanFooter">conexao@mobiliza.com.br</span><br>
-					<span id="endereco" class="spanFooter">Rua Santa Luzia, 100 <br>
-					Edifício The Place - Sala 914 <br>
-					Trindade, Florianópolis | Brasil <br>
-					88036-540 </span>
+					<div class="col-md-4 col-sm-12 meioFooter">
+						<span class="socialFrase spanFooter">Acompanhe a Mobiliza</span>
+						<div id="iconesSocial">
+							<img src="social/icon_facebook.png">
+							<img src="social/icon_linkedin.png">
+							<img src="social/icon_google+.png">
+							<img src="social/icon_twitter.png">
+							<img src="social/insta_branco.png">
+						</div>
+						<span class="socialFrase spanFooter">Trabalhe conosco</span>
+					</div>
+					<div class="col-md-4 col-sm-12 direitaFooter">
+						<span id="contato" class="spanFooter">Contato</span>
+						<h1 id="telefone">(48) 3222.1905</h1>
+						<span id="email" class="spanFooter">conexao@mobiliza.com.br</span><br>
+						<span id="endereco" class="spanFooter">Rua Santa Luzia, 100 <br>
+						Edifício The Place - Sala 914 <br>
+						Trindade, Florianópolis | Brasil <br>
+						88036-540 </span>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
 </body>
 </html>

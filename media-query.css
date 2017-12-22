@@ -88,12 +88,16 @@
 	ul{
 		display: none;
 	}
+	.ativo{
+		display: block;
+	}
 	li{
 		display: block;
 		background-color: rgb(255, 84, 23);
-		padding: 0 30%;
+		padding: 2% 30%;
 		text-align: center;
-
+		top: 35px;
+		margin: auto;
 	}
 }
 
@@ -157,6 +161,7 @@
 	.esquerdaFooter{
 		width: auto;
 		left: 0;
+		text-align: center;
 	}
 
 	.meioFooter{
@@ -164,11 +169,19 @@
 	}
 
 	#frase{
-		width: auto;
+		width: 50%;
+		left: 25%;
 	}
 
 	#telefone{
 		font-size: 2em;
 	}
 
+}
+
+@media screen and (max-width: 400px){
+	#frase{
+		left: 5%;
+		width:auto;
+	}
 }
