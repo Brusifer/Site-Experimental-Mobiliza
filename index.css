@@ -1,55 +1,135 @@
+html, body {
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 1.42857143;
+    color: #333;
+    height: 100%;
+    width:100%;
+}
+/*-----cabecalho------*/
 header{
-	background-color: rgb(255, 84, 23);
+	background-color: transparent;
 	position: fixed;
 	width: 100%;
 	padding-top: 15px;
+	padding-bottom: 20px;
 	top: -5px;
+	z-index: 99;
+	max-height: 70px;
+	margin-left:0;
+}
+#logo{
+	float: right;
+	margin-right: 15%;
 	z-index: 100;
 }
 li{
 	list-style-type: none;
 	display: inline;
-	font-size: 14px;
-	font-family: 'Helvetica Neue', Arial;
+	font-size: 1em;
+	font-family: Lato, sans-serif;
 	color: white;
-	margin: 0 15px;
-	font-weight: 700;
-	font-size: 20px;
+	margin: 0 1.5%;
+	font-weight: 600;
+	position: relative;
+	top: 20px;
+	text-transform: uppercase;
+	animation-duration: 1s;
 }
 li:hover{
 	text-decoration: underline;
 }
+
+header button{
+	float: right;
+	background-color: rgb(255, 84, 23);
+	border: none;
+	color: white;
+	font-size: 3.5em;
+	display:none;
+	position: relative;
+	bottom: 20px;
+}
+
+/*--------slogan principal-------*/
+#sloganPrincipal{
+	background-image: url(backgrounds/elearning_home.png); 
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 .slogan{
 	text-align: center;
 	color: white;
 	font-family: 'Lato', sans-serif;
 	box-sizing:border-box;
-	padding: 400px;
+	padding: 20.5%;
 	font-weight: 800;
-	font-size:50px;
+	font-size:3.7em;
+	line-height: 1.5em;
 	margin:0;
 }
+#pricipal{
+	width:80%;
+}
+#setaSlogan{
+	border: solid white;
+	border-radius: 100%;
+	font-size: 40px;
+	background-color: transparent;
+	color: white;
+	font-family: 'Stalinist One';
+	padding: 0 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+/*-------frases-----*/
 .pos-head{
 	text-align: center;
 	background-color: white;
 	color: #404041;
 	display:block;
 	width: 100%;
-	font-size: 40px;
+	font-size: 3em;
 	margin:0;
 	padding:50px;
 	font-family: Lato, sans-serif;
+	font-weight: 700;
 }
+
+
+/*-------4passos-----*/
 .passos{
 	background-image: url(backgrounds/grafismo_home.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	width:100%;
-	height: 500px;
-	background-size: 100%;
+	height: 400px;
+	margin-left:0;
 }
 #passos4{
-	text-align: justify;
+	text-align: left;
 	padding: 0;
+	font-weight: 700;
+    width: 45%;
+    display: block;
+	min-width: 250px;
 }
+.sessaoPassos{
+	position: relative;
+	left: 10%;
+	top: 10%;
+}
+.sessaoPassos img{
+	display: none;
+}
+
+
+/*-------botoes-----*/
 .bt{
 	background-color: #f55523;
 	color: white;
@@ -59,34 +139,31 @@ li:hover{
     text-decoration: none;
     font-size: 16px;
     border-radius:5px;
-    margin-top: 50px;
+    font-weight: 700;
 }
 .bt:hover{
 	background-color:#d94d21
 }
-#logo{
-	float: right;
-}
-.sessaoPassos{
-	position: relative;
-	left: 10%;
-	top: 100px
-}
+
+
+/*-------comentarios-----*/
 .sessaoComentarios{
 	background-color: white;
 	text-align: center;
-}
-.comentario{
-	text-align: center;
-	display: inline-block;
+	margin-left:0;
 }
 p{
 	color: #070707;
 	font-family: Merriweather,sans-serif;
 	font-size: 1.25em;
-    position: relative;
-    left: 130px;
-    width: 500px;
+  max-width: 90%;
+  text-align:center;
+	line-height:34px;
+}
+.comentario{
+	width: 60%;
+    margin: 0 22%;
+    font-size: 1.25em;
 }
 .block{
 	display: block;
@@ -95,7 +172,6 @@ p{
 	text-align: right;
 	margin: 10px;
 	position: relative;
-	right: 100px;
 }
 .rosto{
 	margin: 50px;
@@ -110,87 +186,107 @@ p{
 	margin-bottom: 150px;
 	font-size: 12px;
 }
-#produzir{
+
+/*-------produtos-----*/
+.logoProduto{
+	height: 35%;
 	position: relative;
-	top: -10px;
+	top: -30px;
+	margin-bottom: -20px;
 }
 .produtos{
+	height: 500px;
 	text-align: center;
 	padding: 100px;
-	position: relative;
-	top: -10px;
-	width: 25%;
-	position: relative;
-  	float: left;
-  	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
-h2{
+.nomeProdutos{
 	color: white;
 	font-family: Lato, sans-serif;
 	font-weight: 700;
-	font-size: 50px;
+	font-size: 3em;
+	margin-bottom: 2%;
 }
+
 .chamativo{
 	color: white;
-	left: 6%;
-	width: 240px;
+	position: relative;
+	left: 25px;
+	margin: 7% 0;
+	width: auto;
+	font-weight: 700;
+	font-family: Lato,sans-serif;
+	font-size: 1.25em;
 }
+
+
+/*-------ultimo slogan-----*/
 .sloganFim{
 	color:#412C60;
 	font-weight: 900;
 	font-family: Lato,sans-serif;
 	background-image: url(backgrounds/fundo_grafismo2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	text-align: center;
 	display: block;
-	padding: 150px;
-	font-size: 50px;
-	position: relative;
-	top: -10px;
+	padding: 7%;
+	font-size: 3em;
 }
-.footerFrase{
-	text-align: center;;
+
+
+/*-------footer-----*/
+.footerSlogan{
 	color: white;
 	display: inline-block;
 	font-size: 40px;
 	margin:0;
-	padding:50px;
+	padding:3%;
 	font-family: Lato, sans-serif;
-	padding-left:400px; 
+	font-weight: 700;
+}
+#btFooter{
+    width: auto;
+    top: 1em;
+	font-family: Lato, sans-serif;
+	font-size: 1.875em;
 }
 .esquerdaFooter{
 	text-align: left;
-	position: relative;
-	left: 300px;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 .meioFooter{
 	text-align: center;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 .direitaFooter{
 	text-align: right;
-	position: relative;
-	right: 300px;
-	margin-bottom: 200px;
+	margin-bottom: 5%;
 }
 
 #frase{
 	color: white;
 	font-family: Merriweather,sans-serif;
-	font-size: 1.105em;
+	font-size: 1em;
     position: relative;
-    left: 0px;
-    width: 260px;
-    font-size: 15px;
-	text-align: justify;
+    width: 75%;
+	text-align: left;
+	margin-top: 1%;
 }
 .spanFooter, #telefone{
 	color: white;
-	font-weight: 400;
+	font-weight: 700;
+	font-family: Lato, sans-serif;
 }
-#copyright{
-	font-size: 13px;
+#copyright, .spanFooter{
+	font-size: 15px;
 }
 #iconesSocial{
-	margin: 35px;
+	margin: 15% 0;
+}
+#email, #endereco{
+	display: block;
 }
