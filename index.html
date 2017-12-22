@@ -14,7 +14,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#menuButton').click(function() {
+			$('#menuButton').click(() => {
   				$('#menu').toggleClass('ativo')
 			});
 			$('.menuItem').fadeOut(10);
@@ -22,14 +22,14 @@
 			$('div').fadeOut(10);
 			$('div').fadeIn(1000);
 
-			$("#setaSlogan").click(function() {
+			$("#setaSlogan").click(() => {
 			    $('html, body').animate({
 			        scrollTop: $("#setaSlogan").offset().top
 			    }, 1500);
 			});
 		});
 
-		$(document).scroll( function() {
+		$(document).scroll(() => {
 		    var value = $(this).scrollTop();
 		    if ( value > 0 )
 		        $("#header").css("backgroundColor", "rgb(255, 84, 23)");
