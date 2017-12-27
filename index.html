@@ -17,16 +17,42 @@
 			$('#menuButton').click(() => {
   				$('#menu').toggleClass('ativo')
 			});
-			$('.menuItem').fadeOut(10);
+			$('#menuProdutos').click(() => {
+				$('html, body').animate({
+			        scrollTop: $("#produzir").offset().top -65
+			    }, 1500);
+			})
+			$('#menuInicio').click(() => {
+				$('html, body').animate({
+			        scrollTop: $("#sloganPrincipal").offset().top -65
+			    }, 1500);
+			})
+			$('.menuItem').fadeOut(1);
 			$('.menuItem').fadeIn(1000);
-			$('div').fadeOut(10);
+			$('div').fadeOut(1);
 			$('div').fadeIn(1000);
 
 			$("#setaSlogan").click(() => {
 			    $('html, body').animate({
-			        scrollTop: $("#setaSlogan").offset().top
+			        scrollTop: $("#primeiroSlogan").offset().top -65
 			    }, 1500);
 			});
+			$(window).scroll( function(){
+
+			    /* Check the location of each desired element */
+			    $('.hideme').each( function(i){
+
+			        var bottom_of_object = $(this).position().top + $(this).outerHeight() - 300;
+			        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+			        /* If the object is completely visible in the window, fade it it */
+			        if( bottom_of_window > bottom_of_object ){
+
+			            $(this).animate({'opacity':'1'},1000);
+
+			        }    
+			    }); 
+			}); 
 		});
 
 		$(document).scroll(() => {
@@ -40,13 +66,13 @@
 </head>
 <body id="body">
 	<header id="header">
-		<div class="col-md-4" >
+		<div class="col-md-4">
 			<img id="logo" src="logos/elearning_mobiliza_logo.png" alt="Mobiliza-Logo" title="Mobiliza">
 		</div>
 		<button id="menuButton">&#8801;</button>
-		<ul class="col-md-8 list-group" id="menu">
-			<li class="menuItem">Início</li>
-			<li class="menuItem">Produtos e Serviços</li>
+		<ul class="col-md-8" id="menu">
+			<li class="menuItem" id="menuInicio">Início</li>
+			<li class="menuItem" id="menuProdutos">Produtos e Serviços</li>
 			<li class="menuItem">Cases</li>
 			<li class="menuItem">Quem Somos</li>
 			<li class="menuItem">Contato</li>
@@ -63,9 +89,9 @@
 		<a id="setaSlogan">&#11167;</a>
 	</div>
 
-	<span class="pos-head" id="primeiroSlogan">Nós cuidamos da execução, <b style="color: black; font-weight: 900;">você cuida das pessoas</b></span>
+	<span class="pos-head hideme" id="primeiroSlogan">Nós cuidamos da execução, <b style="color: black; font-weight: 900;">você cuida das pessoas</b></span>
 
-	<div class="passos">
+	<div class="passos hideme">
 		<div class="column col-md-4 col-sm-12 sessaoPassos">
 			<span  class="slogan" id="passos4">Capacitação online em 4 passos:</span>
 			<br>
@@ -73,10 +99,10 @@
 		</div>
 	</div>
 
-	<span class="pos-head">Veja o que nossos clientes comentam sobre a Mobiliza:</span> 
+	<span class="pos-head hideme">Veja o que nossos clientes comentam sobre a Mobiliza:</span> 
 
 	<div class="sessaoComentarios">
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12 hideme">
 			<img class="rosto" src="parceiros/elearning_home_cliente_vw.png">
 			<div class="comentario">
 				<p class="block">"Desde 2009, a Mobiliza nos traz inovação em forma de resultados reais. Hoje, mais de 20.000 pessoas aprendem através dos treinamentos e-Learning produzidos por eles. Isso nos trouxe economia, escala, alcance e eficácia."</p>
@@ -84,7 +110,7 @@
 				<span class="block ocupacao">Responsável técnico por treinamentos na Academia Volkswagen</span>
 			</div>
 		</div>
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12 hideme">
 			<img class="rosto" src="parceiros/elearning_home_cliente_az.png">
 			<div class="comentario">
 				<p class="block">"Fizemos com a Mobiliza e Essence RH uma ação com cursos gamificados, ao longo do ano inteiro, que teve muito engajamento das nossas equipes de vendas. Estou satisfeito com os resultados e por isso já iniciamos um novo projeto."</p>
@@ -94,12 +120,12 @@
 		</div>
 	</div>
 
-	<img src="apoiadores.png" id="apoio">
+	<img src="apoiadores.png hideme" id="apoio">
 
-	<span class="pos-head" id="produzir">Gamification? Mobile learning? O que você precisa produzir?</span>
+	<span class="pos-head hideme" id="produzir">Gamification? Mobile learning? O que você precisa produzir?</span>
 	
 	<div class="row">
-		<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_applique.png);">
+		<div class="produtos col-lg-3 col-md-6 col-sm-12 hideme" style="background-image: url(backgrounds/elearning_home_applique.png);">
 			<img src="logos/elearning_applique_logo.png" class="logoProduto">
 			<h2 class="nomeProdutos">Applique</h2>
 			<p class="chamativo">Faça você mesmo. <br>
@@ -107,7 +133,7 @@
 				na hora de criar.</p>
 			<button class="bt">Conheça o Applique</button>
 		</div>
-		<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_smart.png);">
+		<div class="produtos col-lg-3 col-md-6 col-sm-12 hideme" style="background-image: url(backgrounds/elearning_home_smart.png);">
 			<img src="logos/elearning_smart_logo.png" class="logoProduto">
 			<h2 class="nomeProdutos">Smart</h2>
 			<p class="chamativo">Nós fazemos <br>
@@ -115,7 +141,7 @@
 				para você editar.</p>
 			<button class="bt">Conheça o Smart</button>
 		</div>
-		<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/elearning_home_studio.png);">
+		<div class="produtos col-lg-3 col-md-6 col-sm-12 hideme" style="background-image: url(backgrounds/elearning_home_studio.png);">
 			<img src="logos/elearning_icon_studio.png" class="logoProduto">
 			<h2 class="nomeProdutos">Studio</h2>
 			<p class="chamativo">Nós fazemos <br>
@@ -124,7 +150,7 @@
 			</p>
 			<button class="bt">Conheça o Studio</button>
 		</div>
-		<div class="produtos col-lg-3 col-md-6 col-sm-12" style="background-image: url(backgrounds/Site_Class_Home.png);">
+		<div class="produtos col-lg-3 col-md-6 col-sm-12 hideme" style="background-image: url(backgrounds/Site_Class_Home.png);">
 			<img src="logos/elearning_class_logo.png" class="logoProduto">
 			<h2 class="nomeProdutos">Class</h2>
 			<p class="chamativo">Cursos de prateleira<br> 
@@ -135,24 +161,24 @@
 	</div>
 
 
-	<span class="sloganFim">Estamos há mais de 13 anos <br>
+	<span class="sloganFim hideme">Estamos há mais de 13 anos <br>
 	fazendo o que amamos: <br>
 	<b>desenvolvimento e-Learning</b></span>
 
 	<div style="background-image: url(backgrounds/footer_pattern.png);">
 		<footer class="container">
-			<div class="row" style="margin-bottom: 50px;">
+			<div class="row hideme footer" style="margin-bottom: 50px;">
 				<h2 class="footerSlogan col-sm-9">Torne real seu projeto de treinamento!</h2>
 				<button class="bt col-sm-3" id="btFooter">Fale com um consultor</button>
 			</div>
 			<div class="row">
 				<div>
-					<div class="col-md-4 col-sm-12 esquerdaFooter">
+					<div class="col-md-4 col-sm-12 esquerdaFooter hideme">
 						<img src="logos/elearning_mobiliza_logo_slogan.png">
 						<p id="frase">Somos especialistas em capacitação online e trabalhamos com o método de 4 passos. Planejamento, produção, acompanhamento e análise. </p>
 						<span id="copyright" class="spanFooter">© 2017 Mobiliza | Todos direitos reservados</span>
 					</div>
-					<div class="col-md-4 col-sm-12 meioFooter">
+					<div class="col-md-4 col-sm-12 meioFooter hideme">
 						<span class="socialFrase spanFooter">Acompanhe a Mobiliza</span>
 						<div id="iconesSocial">
 							<img src="social/icon_facebook.png">
@@ -163,7 +189,7 @@
 						</div>
 						<span class="socialFrase spanFooter">Trabalhe conosco</span>
 					</div>
-					<div class="col-md-4 col-sm-12 direitaFooter">
+					<div class="col-md-4 col-sm-12 direitaFooter hideme">
 						<span id="contato" class="spanFooter">Contato</span>
 						<h1 id="telefone">(48) 3222.1905</h1>
 						<span id="email" class="spanFooter">conexao@mobiliza.com.br</span><br>

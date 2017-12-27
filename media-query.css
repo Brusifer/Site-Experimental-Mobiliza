@@ -27,6 +27,7 @@
 	/*-----4passos-----*/
 	.passos{
 		background-image:url(backgrounds/grafismo_centered.png);
+		text-align: center;
 	}
 	#passos4{
 		display:inline;
@@ -38,7 +39,6 @@
 	#btConhecer{
 		position: relative;
 		margin-top: 225px;
-		left: 25%;
 	}	
 
 	/*------comentarios-------*/
@@ -90,6 +90,8 @@
 	}
 	.ativo{
 		display: block;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
 	}
 	li{
 		display: block;
@@ -98,6 +100,7 @@
 		text-align: center;
 		top: 35px;
 		margin: auto;
+		font-size: 1.25em;
 	}
 }
 
@@ -148,6 +151,10 @@
 
 
 	/*-------footer----------*/
+	.footer{
+		text-align: center;
+		margin: 15px 0;
+	}
 
 	.footerSlogan{
 		font-size: 2em;
