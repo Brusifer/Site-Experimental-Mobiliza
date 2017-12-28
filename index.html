@@ -21,16 +21,20 @@
 				$('html, body').animate({
 			        scrollTop: $("#produzir").offset().top -65
 			    }, 1500);
+			    $("#menuProdutos").addClass('destacado');
+			    $("#menuInicio").removeClass('destacado');
 			})
 			$('#menuInicio').click(() => {
 				$('html, body').animate({
 			        scrollTop: $("#sloganPrincipal").offset().top -65
 			    }, 1500);
+			    $("#menuProdutos").removeClass('destacado');
+			    $("#menuInicio").addClass('destacado');
 			})
 			$('.menuItem').fadeOut(1);
 			$('.menuItem').fadeIn(1000);
-			$('div').fadeOut(1);
-			$('div').fadeIn(1000);
+			$('#principal').fadeOut(1);
+			$('#principal').fadeIn(1000);
 
 			$("#setaSlogan").click(() => {
 			    $('html, body').animate({
@@ -71,7 +75,7 @@
 		</div>
 		<button id="menuButton">&#8801;</button>
 		<ul class="col-md-8" id="menu">
-			<li class="menuItem" id="menuInicio">Início</li>
+			<li class="menuItem destacado" id="menuInicio">Início</li>
 			<li class="menuItem" id="menuProdutos">Produtos e Serviços</li>
 			<li class="menuItem">Cases</li>
 			<li class="menuItem">Quem Somos</li>
@@ -83,7 +87,7 @@
 
 	<div id="sloganPrincipal">
 		<h1 class="slogan">
-			<span id="pricipal">Capacitação online descomplicada.<br>
+			<span id="principal">Capacitação online descomplicada.<br>
 			Torne real seu projeto de treinamento!</span>
 		</h1>
 		<a id="setaSlogan">&#11167;</a>
@@ -120,7 +124,7 @@
 		</div>
 	</div>
 
-	<img src="apoiadores.png hideme" id="apoio">
+	<img class="hideme" src="apoiadores.png" id="apoio">
 
 	<span class="pos-head hideme" id="produzir">Gamification? Mobile learning? O que você precisa produzir?</span>
 	
